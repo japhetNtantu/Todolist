@@ -6,19 +6,19 @@ from firebase_admin import credentials
 import pyrebase
 import json
 import os
-from dotenv import dotenv_values
+# from dotenv import dotenv_values
  
-config = dotenv_values(".env")
+# config = dotenv_values(".env")
  
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
  
-# load_dotenv()
+load_dotenv()
  
-# config={s
-#     "FIREBASE_SERVICE_ACCOUNT_KEY": os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY"),
-#     "FIREBASE_CONFIG": os.getenv("FIREBASE_CONFIG")
-# }
-#from configs.firebase_config import firebase_config
+config={
+    "FIREBASE_SERVICE_ACCOUNT_KEY": os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY"),
+    "FIREBASE_CONFIG": os.getenv("FIREBASE_CONFIG")
+}
+
  
 if not firebase_admin._apps:
  
